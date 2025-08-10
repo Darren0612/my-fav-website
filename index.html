@@ -192,7 +192,14 @@
         #mobile-menu-btn.active .line-3 {
             transform: translateY(-8px) rotate(-45deg);
         }
-
+        /* Styling untuk gambar di dalam modal/popup agar berukuran 50% */
+        .modal-image-50 {
+            width: 50%; /* Mengubah ukuran gambar menjadi 50% */
+            max-width: 100%; /* Pastikan tidak melebihi container */
+            height: auto; /* Mempertahankan rasio aspek */
+            display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+            margin: auto; /* Membuat gambar berada di tengah */
+        }
     </style>
 </head>
 <body class="p-4 sm:p-8">
@@ -306,7 +313,7 @@
                 <h1 class="text-3xl sm:text-4xl font-bold playfair-font text-gray-800">Fase Bimbang</h1>
             </div>
             <div class="text-lg leading-relaxed text-justify space-y-4">
-                <p>Setelah chattingan beberapa hari, aku ngerasa bimbang banget antara cobain deket sama ade kelas ini atau mending sendiri aja ya. Aku waktu itu ngerasa kayanya gaperlu deh punya cewe, mending main aja sama temen, sama keluarga. Akhirnya aku decide buat jauh aja walaupun ya sebenernya masih ada perasaan suka ini walaupun belum segede itu. 2 September 2024, dia sekretaris kelas jadi sering bolak-balik depan kelas 12 buat ngumpulin absensi, dia manggil pagi-pagi, aku sebenernya sadar tapi aku pura-pura galiat, ya jujur aku jahat bgt. Siangnya aku lagi pake motor depan Trinitas, dia lagi jalan sama temennya manggil aku katanya sampe 3x, jujur yang ini aku telat sadar, pas sadar aku udah kagok mau nyapa baliknyaa tapi aku ngerasa biasa aja karena emang aku mau ngejauh. Dari situ kamu kayanya takut untuk ngechat lagi dan aku juga ga ngechat. Tanggal 14 September, aku iseng ngereply story kamu karena kok ngerasa kaya ada yg aneh sama perasaan aku saat itu, tapi lagi-lagi aku gaberani ngelanjutin chatan karena takut kalo cuma penasaran doang. Akhirnya dari situ ga chatan sama kamu lagi.</p>
+                <p>Setelah chattingan beberapa hari, aku ngerasa bimbang banget antara cobain deket sama ade kelas ini atau mending sendiri aja ya. Aku waktu itu ngerasa kayanya gaperlu deh punya cewe, mending main aja sama temen, sama keluarga. Akhirnya aku decide buat jauh aja walaupun ya sebenernya masih ada perasaan suka ini walaupun belum segede itu. 2 September 2024, kamu sekretaris kelas jadi sering bolak-balik depan kelas 12 buat ngumpulin absensi, kamu manggil pagi-pagi, kamu sebenernya sadar tapi aku pura-pura galiat, ya jujur aku jahat bgt. Siangnya aku lagi pake motor depan Trinitas, kamu lagi jalan sama temen manggil aku katanya sampe 3x, jujur yang ini aku telat sadar, pas sadar aku udah kagok mau nyapa baliknyaa. Dari situ kamu kayanya takut untuk ngechat lagi dan aku juga ga ngechat. Tanggal 14 September, aku iseng ngereply story kamu karena kok ngerasa kaya ada yg aneh sama perasaan aku saat itu, tapi lagi-lagi aku gaberani ngelanjutin chatannya. Akhirnya dari situ ga chatan sama kamu lagi.</p>
             </div>
             <!-- Image gallery for the third section (3 photos) -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -341,7 +348,7 @@
                 <p><b>(8 Januari 2025)</b> Ada acara natalan di sekolah dan aku udah bukan lagi OSIS dan sekarang jadi penonton. Waktu itu kamu tampil dance kalo gasalah harry potter deh, auranya beneran senonjol itu sampe temen-temen aku terpukau dan ngomong ke aku. Karena dari sebelumnya aku udah cerita-cerita ke yang lain tentang perasaan aku selama libur akhir semester itu, gimana aku mulai ngerasa mau buka hati ke kamu. Akhirnya aku beraniin reply story dan dari situ kita chatan panjang. Aku inget waktu itu lagi tes berenang sama pa ali, aku ngobrol sama Nicho, Farrel kalo nanti deket sama kamu gimana ya anter jemputnya karena kata mereka rumah kamu lumayan jauh dari sekolah. Tapi aku lanjut aja sampe move ke wa dan singkat cerita kita jadi deket banget. Oiya waktu itu aku ada masalah pas jadi panitia triop dan cerita panjang lebar juga ke kamu. Waktu itu juga lagi sering latihan buat uprak seni budaya wkwkwk.</p>
             </div>
             <!-- Image gallery for the fifth section (1 photo) -->
-            <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 max-w-md mx-auto">
                 <div class="relative overflow-hidden rounded-xl shadow-md image-hover-effect"><img src="Sweet Secret/Mulai buka hati hehe.jpg" alt="A placeholder for a memory picture" class="w-full h-auto object-cover"></div>
             </div>
         </section>
@@ -366,13 +373,13 @@
                 <!-- Moment 2: 1 photo -->
                 <div onclick="showMomentDetails(2)" class="bg-white bg-opacity-70 rounded-xl shadow-lg p-6 space-y-4 glass-container cursor-pointer">
                     <h2 class="text-xl font-bold text-gray-800"><b>(25 Januari 2025)</b> Final Triop</h2>
-                    <img src="Sweet Secret/Final triop" alt="Final Triop picture" class="w-full h-auto object-cover rounded-lg image-hover-effect">
+                    <img src="Sweet Secret/Final Triop" alt="Final Triop picture" class="w-full h-auto object-cover rounded-lg image-hover-effect">
                 </div>
 
                 <!-- Moment 3: 2 photos -->
                 <div onclick="showMomentDetails(3)" class="bg-white bg-opacity-70 rounded-xl shadow-lg p-6 space-y-4 glass-container cursor-pointer">
                     <h2 class="text-xl font-bold text-gray-800"><b>(27 Januari 2025)</b> Our First Date</h2>
-                    <img src="Sweet Secret/1st Date.jpg" alt="First date photo 1" class="w-full h-auto object-cover rounded-lg image-hover-effect">
+                    <img src="Sweet Secret/1st Date .jpg" alt="First date photo 1" class="w-full h-auto object-cover rounded-lg image-hover-effect">
                 </div>
                 
                 <!-- Moment 4: 1 photo -->
@@ -496,8 +503,8 @@
             <span id="modal-close-btn" class="modal-close-btn">&times;</span>
             <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold playfair-font mb-4"></h2>
             <p id="modal-text" class="text-base leading-relaxed text-justify mb-6"></p>
-            <div id="modal-images" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Gambar-gambar akan dimasukkan di sini oleh JavaScript -->
+            <div id="modal-images" class="flex flex-col sm:flex-row justify-center items-center gap-4">                
+    <!-- Gambar-gambar akan dimasukkan di sini oleh JavaScript -->
             </div>
         </div>
     </div>
@@ -531,7 +538,7 @@
                 title: '<b>(27 Januari 2025)</b> Our First Date',
                 text: 'Paginya aku abis pergi dari Tahura buat foto kelas. Pulangnya aku cepet-cepet banget karena takut telat pergi ke FCLnya. Jujur aja aku gasuka double date atau triple date, tapi waktu itu 1st date kita triple date main Pandora, aku waktu itu awkward banget pas kamu pegang tangan aku di pandora. Jujur aku jarang banget physical touch sama cewe tapi waktu itu kek salting parah WKWKWKWK. Pulang pandora juga kita photobox berenam HAHAHA. Pulang nganterin kamu aku langsung buru-buru pergi basket karena udah telat, nyampe-nyampe malah pinggangnya kecetit sakit banget jadi gabisa basket tapi gapapa lah hari itu udah seru banget.',
                 images: [
-                    'Sweet Secret/1st Date.jpg',
+                    'Sweet Secret/1st Date .jpg',
                     'Sweet Secret/1st Photobox.jpg'
                 ]
             },
@@ -546,7 +553,7 @@
                 title: '<b>(8 Februari 2025)</b> Rumah Oma Eliz -> Braga -> Katedral',
                 text: 'Waktu itu kamu ngajak aku main ke rumah oma eliz berenam lagi, nyusun logo abis itu kita ke Braga karena amel sama eliz ada kerkel misdi kated. Aku, kamu, nicho, benen pegi ke kopi toko djawa nungguin amel ama eliz. Beresnya kita pesen makan di cafe karena kenyang jadi 1 berdua HAHAHA. Abis itu aku nemenin kamu gereja karena yang lain tugas jadi kamu duduk sendiri',
                 images: [
-                    'Sweet Secret/Rumah Oma Eliz.jpg',
+                    'Sweet Secret/Rumah Oma Eliz .jpg',
                     'Sweet Secret/Kopi Toko Djawa.jpg',
                     'Sweet Secret/Gereja Bareng.jpg'
                 ]
@@ -589,7 +596,7 @@
                 title: '<b>(25 Februari 2025)</b> Pertama kali nganterin kamu bawa bubu keluar',
                 text: 'Foto ini lucu banget aku kirim ke instagram story hehehe',
                 images: [
-                    'Sweet Secret/Bubu dan Rachel.jpg'
+                    'Sweet Secret/Bubu and Rachel.jpg'
                 ]
             },
             11: {
@@ -718,7 +725,7 @@
                     imgDiv.className = 'relative overflow-hidden rounded-xl shadow-md image-hover-effect';
                     const img = document.createElement('img');
                     img.src = imageSrc;
-                    img.className = 'w-full h-auto object-cover rounded-lg';
+                    img.className = 'w-1/2 h-auto object-cover rounded-lg mx-auto';                        
                     imgDiv.appendChild(img);
                     modalImages.appendChild(imgDiv);
                 });
@@ -766,6 +773,7 @@
     </script>
 </body>
 </html>
+
 
 
 
