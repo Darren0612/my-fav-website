@@ -200,6 +200,39 @@
             display: block; /* Menghilangkan spasi ekstra di bawah gambar */
             margin: auto; /* Membuat gambar berada di tengah */
         }
+
+        .gambar-isi {
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+        }
+        .pembungkus-gambar {
+              position: relative;
+              overflow: hidden;
+              border-radius: 0.75rem; /* setara dengan rounded-xl di Tailwind */
+              box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* setara dengan shadow-md di Tailwind */
+            }
+
+        /* Efek hover, yang sudah ada di tag <style> mu */
+        .pembungkus-gambar.image-hover-effect {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gambar-container {
+              display: grid;
+              grid-template-columns: repeat(1, minmax(0, 1fr));
+              gap: 1rem; /* setara dengan gap-4 di Tailwind */
+        }
+
+        @media (min-width: 640px) {
+          .gambar-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        .pembungkus-gambar.image-hover-effect:hover {
+              transform: scale(1.02); /* Gambar membesar sedikit */
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Menambahkan bayangan */
+        }
     </style>
 </head>
 <body class="p-4 sm:p-8">
@@ -494,10 +527,14 @@
                 <p>Akhirnya aku beraniin diri buat nulis ini semua dan sejujurnya aku berharap kamu maafin aku dan kita mungkin bisa pelan-pelan balik kaya dulu lagi. Aku berharap bisa lebih deket lagi sama kamu, lebih giat belajar buat kuliah, dan goals aku sama yaitu pengen nyari uang selama kuliah entah dari magang ato jualan. Aku ga minta kamu buat langsung terima tapi tolong pikirin ya Claire.. 我爱你</p>
             </div>
         <!-- Image gallery for this section (2 photos) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="relative overflow-hidden rounded-xl shadow-md image-hover-effect"><img src="Sweet Secret/Ko Steve.jpg" alt="A placeholder for a memory picture" class="w-full h-auto object-cover"></div>
-                <div class="relative overflow-hidden rounded-xl shadow-md image-hover-effect"><img src="Sweet Secret/Ko Steve2.jpg" alt="A placeholder for a memory picture" class="w-full h-auto object-cover"></div>
+            <div class="gambar-container">
+                <div class="pembungkus-gambar image-hover-effect">
+                <img src="Sweet Secret/Ko Steve.jpg" alt="A placeholder for a memory picture" class="gambar-isi">
             </div>
+            <div class="pembungkus-gambar image-hover-effect">
+                <img src="Sweet Secret/Ko Steve2.jpg" alt="A placeholder for a memory picture" class="gambar-isi">
+            </div>
+</div>
         </section>
 
     </div>
@@ -778,6 +815,7 @@
     </script>
 </body>
 </html>
+
 
 
 
