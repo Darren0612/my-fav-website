@@ -758,7 +758,34 @@
             userKangenValue.textContent = this.value + '%';
             this.style.setProperty('--value', this.value + '%');
         });
+ // Mendapatkan elemen audio dan tombol dari HTML
+        const audio = document.getElementById('background-music');
+        const toggleBtn = document.getElementById('music-toggle-btn');
+        const icon = document.getElementById('music-icon');
+        const startTimestamp = 25; // Waktu mulai dalam detik
 
+        // Menambahkan event listener untuk tombol
+        toggleBtn.addEventListener('click', function() {
+            // Jika musik sedang diputar, jeda. Jika tidak, putar.
+            if (audio.paused) {
+                // Saat pertama kali diputar atau setelah dijeda, atur waktunya
+                audio.currentTime = startTimestamp;
+                audio.play();
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+            }
+        });
+
+        // Event listener untuk saat lagu selesai
+        audio.addEventListener('ended', function() {
+            // Mengatur kembali waktu putar ke detik ke-25 dan memutarnya lagi
+            audio.currentTime = startTimestamp;
+            audio.play();
+        });
         // Function untuk menampilkan pop-up momen (tetap sama)
         function showMomentDetails(id) {
             const moment = moments[id];
@@ -861,6 +888,7 @@
     </script>
 </body>
 </html>
+
 
 
 
